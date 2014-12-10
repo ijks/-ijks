@@ -1,0 +1,32 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,600,400);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+body {
+    background-color: #ed2939;
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+}
+
+a:link {
+    color: #ffffff;
+}
+
+a:visited {
+    color: #ffffff;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+a:active {
+    color: #ffffff;
+}
+
+#old-colour {
+    background-color: #eb1414;
+}
