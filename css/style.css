@@ -1,32 +1,27 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,600,400);
-@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,600);
 
-body {
-    background-color: #ed2939;
-    color: #000000;
+p, li {
     font-family: 'Open Sans', sans-serif;
 }
 
-h1 {
-    font-family: 'Raleway', sans-serif;
+header {
+    margin-top: 6rem;
+    text-align: center;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #ed2939;
+    color: #ed2939;
 }
 
-a:link {
-    color: #ffffff;
+header .title {
+    margin: 1.4rem 0;
 }
 
-a:visited {
-    color: #ffffff;
-}
-
-a:hover {
-    color: #ffffff;
-}
-
-a:active {
-    color: #ffffff;
+section.post {
+    border-bottom: 1px solid #F5D0D3;
 }
 
 #old-colour {
-    background-color: #eb1414;
+    color: #eb1414;
 }
