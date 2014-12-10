@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,600,400);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
 body {
     background-color: #ed2939;
     color: #000000;
@@ -24,6 +27,6 @@ a:active {
     color: #ffffff;
 }
 
-#old-colour {
+#old- {
     background-color: #eb1414;
 }
