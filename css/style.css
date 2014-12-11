@@ -1,25 +1,36 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,600,400);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,600);
 
-p, li {
-    font-family: 'Open Sans', sans-serif;
-}
-
 header {
     margin-top: 6rem;
     text-align: center;
-    border-top: 1px solid;
+    /*border-top: 1px solid;
     border-bottom: 1px solid;
-    border-color: #ed2939;
-    color: #ed2939;
+    border-color: #ed2939;*/
+    background-color: #ed2939;
+    color: #eee;
 }
 
 header .title {
-    margin: 1.4rem 0;
+    font-weight: bold;
+    padding: 2rem 0;
 }
 
-section.post {
-    border-bottom: 1px solid #F5D0D3;
+.section{
+    border-right: 4px solid #ed2939;
+    /*background-color: #eee;*/
+    text-align: right;
+    color: #ed2939;
+    padding: 0.8rem 1.4rem;
+}
+
+.section h1 {
+    margin: 0;
+}
+
+.blog .post {
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 1px solid #eee;
 }
 
 #old-colour {
