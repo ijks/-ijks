@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,600,400);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,600);
 
+/* Mobile first queries */
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -25,15 +26,10 @@ header .title {
 }
 
 .section{
-    border-right: 4px solid #ed2939;
     /*background-color: #eee;*/
-    text-align: right;
     color: #ed2939;
-    padding: 0.8rem 1.4rem;
-}
-
-.section h1 {
-    margin: 0;
+    margin-bottom: 1.2rem;
+    border-bottom: 4px solid #ed2939;
 }
 
 .blog article {
@@ -44,3 +40,32 @@ header .title {
 #old-colour {
     color: #eb1414;
 }
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+    .section {
+        padding: 0.8rem 1.4rem;
+        border-bottom-width: 0;
+        border-right: 4px solid #ed2939;
+        text-align: right;
+    }
+    .section h2 {
+        margin: 0rem;
+        margin-bottom: 0.8rem;
+    }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
