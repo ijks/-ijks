@@ -6,11 +6,11 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-h1, h2, h3 {
+header, h1, h2, h3 {
     font-family: 'Raleway', sans-serif;
 }
 
-header {
+header.title {
     margin-top: 6rem;
     text-align: center;
     /*border-top: 1px solid;
@@ -20,16 +20,20 @@ header {
     color: #eee;
 }
 
-header .title {
+header.title h1 {
     font-weight: bold;
     padding: 2rem 0;
 }
 
-.section{
+.section {
     /*background-color: #eee;*/
     color: #ed2939;
     margin-bottom: 1.2rem;
     border-bottom: 4px solid #ed2939;
+}
+
+.blog header {
+
 }
 
 .blog article {
@@ -53,7 +57,8 @@ header .title {
         border-right: 4px solid #ed2939;
         text-align: right;
     }
-    .section h2 {
+
+    .section h1 {
         margin: 0rem;
         margin-bottom: 0.8rem;
     }
