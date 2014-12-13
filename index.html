@@ -2,7 +2,7 @@
 <head>
   <!-- meta -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- styles -->
   <link rel="stylesheet" href="css/normalize.css">
@@ -26,8 +26,16 @@
       <h1>About</h1>
     </div>
     <div class="about nine columns">
-      <p>Hey there! I'm Daan, I'm 17 years old and I live in The Netherlands. My interests are philosophy, technology, math, and the intersection of both. I like programming, Python being my current language of choice. I've also been playing the double bass for 5 years, participating in a folk music band, among other things.</p>
+      <p>Hey there! I'm Daan, I'm 17 years old and I live in The Netherlands. My interests are technology and philosophy, and I'm not afraid to combine those two either. Python is my current programming language of choice, but I also have knowledge of Haskell and JavaScript, and I'm planning on getting into Ruby. I've also been playing the double bass for 5 years, participating in a folk music band, among other things.</p>
       <p>This site is still under construction, so things might look a bit weird as I keep wrestling with CSS...</p>
+      <h4>To-do list</h4>
+      <ul>
+        <li>Navbar</li>
+        <li>Improve mobile layout</li>
+        <li>Fix sizes and margins of headers (Skeleton is kinda letting me down here)</li>
+        <li>Layout/design tweaks, etc.</li>
+        <li>Moar blog posts</li>
+      </ul>
     </div>
   </div>
   <div class="row">
@@ -36,24 +44,18 @@
     </div>
     <div class="projects nine columns">
       <div class="row">
-        <a href="https://github.com/ijks/textinator">
-          <div class="four columns project">
+        <div class="six columns">
+          <a href="https://github.com/ijks/textinator">
             <h2>Textinator</h2>
             <p>A command line image viewer, written in Python 3 using Click and Pillow.</p>
-          </div>
-        </a>
-        <a href="https://github.com/ijks/resizr">
-          <div class="four columns project">
+          </a>
+        </div>
+        <div class="six columns">
+          <a href="https://github.com/ijks/resizr">
             <h2>Resizr</h2>
             <p>An unfinished Reddit bot that resizes images by request.</p>
-          </div>
-        </a>
-        <a href="https://github.com/ijks/-ijks">
-          <div class="four columns project">
-            <h2>~ijks</h2>
-            <p>This very site. ;)</p>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -62,6 +64,16 @@
       <h1>Blog</h1>
     </div>
     <div class="blog nine columns">
+      <article>
+        <header>
+          <h2>That feel when...</h2>
+          <p>13/12/2014</p>
+        </header>
+        <p>...you're finally just enough skilled to use something however you want. That's one of the most awesome feelings to me, and really makes me want to keep learning something. Today, I had this realisation with CSS: I just finally <em>got it</em>: I now feel like I can style a page pretty much however I want, and when the CSS doesn't behave as expected, I can fix it myself.</p>
+        <p>This evening I fixed the projects section, which I had some trouble with yesterday. It turns out, because I had the <code>.column</code> divs within an anchor, they were all the first child of that anchor. The CSS boilerplate I'm using, <a href="https://www.getskeleton.com">Skeleton</a>, uses the <code>:first-child</code> pseudoclass to remove the left margin from the first column in a row, but that got applied to all the columns. So I fixed that by putting a div around the anchors, and removing the inner divs, because they weren't really necessary.</p>
+        <p>I also added some nice transitions to the project buttons, which turned out to be surprisingly easy to do. They now fade to red very nicely when you hover over them. I also changed the body font to Roboto Slab, which looks pretty classy if you ask me. :P</p>
+        <p>I'm not done with this page yet though, take a look at the to do list above. But I'm a lot less frustrated by CSS now. I still feel a bit <em>meh</em> about web programming though. But that's a topic for another time.</p>
+      </article>
       <article>
         <header>
           <h2>The community grows!</h2>

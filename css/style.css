@@ -1,13 +1,29 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,600,400);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,600);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
 
 /* Mobile first queries */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Slab', serif;
 }
 
-header, h1, h2, h3 {
+header, h1, h2, h3, h4, h5 {
     font-family: 'Raleway', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #ed2939;
+    border-bottom: 1px dashed #bbb;
+}
+
+a:hover {
+    color: #ed2939;
+    border-bottom: 1px solid #ed2939;
+}
+
+a:active {
+    color: #bbb;
+    border-color: #bbb;
 }
 
 header.title {
@@ -30,6 +46,36 @@ header.title h1 {
     color: #ed2939;
     margin-bottom: 1.2rem;
     border-bottom: 4px solid #ed2939;
+}
+
+.projects .columns {
+    padding: 0.8rem;
+
+    text-align: center;
+    background-color: #eee;
+    color: #222;
+
+    transition: all 0.2s;
+}
+
+.projects .columns:hover {
+    background-color: #ed2939;
+    color: #eee;
+}
+
+.projects .columns:active {
+    background-color: #fff;
+    color: #ed2939;
+    transition: all 100ms;
+}
+
+.projects .columns > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.projects h2 {
+    margin-bottom: 0.8rem;
 }
 
 .blog header {
@@ -61,6 +107,17 @@ header.title h1 {
     .section h1 {
         margin: 0rem;
         margin-bottom: 0.8rem;
+    }
+
+    .projects .row {
+        overflow: hidden; /* see below */
+    }
+
+    .projects .columns {
+        /* "one true layout" hack, see:
+        http://css-tricks.com/fluid-width-equal-height-columns/ */
+        margin-bottom: -500rem;
+        padding-bottom: 500rem;
     }
 }
 
