@@ -20,7 +20,9 @@ function displayVoteTally() {
             if (Array.isArray(item)) {
                 var $voteUl = $('<ul></ul>');
                 $.each(item, function(_, subject){
-                    $voteUl.append(subject);
+                    $('<li></li>', {
+                        text: subject
+                    }).appendTo($voteUl);
                 });
                 $voteUl.appendTo($resultList);
             } else {
