@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    displayVoteTally();
+});
+
+function displayVoteTally() {
     $.getJSON('api/votetally.json', function(data){
         results = [];
         $.each(data, function(subject, votes){
@@ -26,9 +30,13 @@ $(document).ready(function() {
             }
         });
 
-        $('endpoint#votetally .status').append($resultList);
+        $resultList.appendTo($('#votetally.status'));
+    }).error(function(){
+        $('<p/>', {
+            text: "Couldn't load the data! Go bother ijks about it."
+        }).appendTo($('#votetally.status'));
     });
-});
+}
 
 // {
 //     "color": {
