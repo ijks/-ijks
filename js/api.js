@@ -4,27 +4,27 @@ $(document).ready(function() {
 
 function displayVoteTally() {
     $.getJSON('api/votetally.json', function(data){
-        results = [];
+        var results = [];
         $.each(data, function(subject, votes){
             results.push(subject);
 
-            voteResults = []
+            var voteResults = []
             $.each(votes, function(vote, amount){
                 voteResults.push(vote + ': ' + amount);
             });
             results.push(voteResults);
         });
 
-        $resultList = $('<ul/>')
+        var $resultList = $('<ul></ul>')
         $.each(results, function(item){
             if (Array.isArray(item)) {
-                $voteUl = $('<ul/>');
+                var $voteUl = $('<ul></ul>');
                 $.each(item, function(subject){
                     $voteUl.append(subject);
                 });
                 $voteUl.appendTo($resultList);
             } else {
-                $('<li/>', {
+                $('<li></li>', {
                     text: item
                 }).appendTo($resultList);
             }
@@ -32,7 +32,7 @@ function displayVoteTally() {
 
         $resultList.appendTo($('#votetally.status'));
     }).error(function(){
-        $('<p/>', {
+        $('<p></p>', {
             text: "Couldn't load the data! Go bother ijks about it."
         }).appendTo($('#votetally.status'));
     });
