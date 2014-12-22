@@ -16,10 +16,10 @@ function displayVoteTally() {
         });
 
         var $resultList = $('<ul></ul>')
-        $.each(results, function(item){
+        $.each(results, function(_, item){
             if (Array.isArray(item)) {
                 var $voteUl = $('<ul></ul>');
-                $.each(item, function(subject){
+                $.each(item, function(_, subject){
                     $voteUl.append(subject);
                 });
                 $voteUl.appendTo($resultList);
