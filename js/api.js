@@ -1,24 +1,32 @@
 $(document).ready(function() {
     $.getJSON('api/votetally.json', function(data){
-        $ul = $('ul')
-
+        results = [];
         $.each(data, function(subject, votes){
-            $('li', {
-                html: subject +':'
-            }).appendTo($ul);
+            results.push(subject);
 
-            $voteUl = $('ul');
-
+            voteResults = []
             $.each(votes, function(vote, amount){
-                $('li', {
-                    html: vote + ': ' + amount
-                }).appendTo($voteUl);
+                voteResults.push(vote + ': ' + amount);
             });
-
-            $voteUl.appendTo($ul);
+            results.push(voteResults);
         });
 
-        $ul.appendTo('endpoint#votetally .status')
+        $resultList = $('<ul/>')
+        $.each(results, function(item){
+            if (Array.isArray(item)) {
+                $voteUl = $('<ul/>');
+                $.each(item, function(subject){
+                    $voteUl.append(subject);
+                });
+                $voteUl.appendTo($resultList);
+            } else {
+                $('<li/>', {
+                    text: item
+                }).appendTo($resultList);
+            }
+        });
+
+        $('endpoint#votetally .status').append($resultList);
     });
 });
 
