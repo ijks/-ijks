@@ -41,14 +41,14 @@ header.title h1 {
     padding: 2rem 0;
 }
 
-.section {
+.section-header {
     /*background-color: #eee;*/
     color: #ed2939;
     margin-bottom: 1.2rem;
     border-bottom: 4px solid #ed2939;
 }
 
-.projects .columns {
+#projects .content .columns {
     padding: 0.8rem;
 
     text-align: center;
@@ -58,31 +58,31 @@ header.title h1 {
     transition: all 0.2s;
 }
 
-.projects .columns:hover {
+#projects .content .columns:hover {
     background-color: #ed2939;
     color: #eee;
 }
 
-.projects .columns:active {
+#projects .content .columns:active {
     background-color: #fff;
     color: #ed2939;
     transition: all 100ms;
 }
 
-.projects .columns > a {
+#projects .content .columns > a {
     color: inherit;
     text-decoration: none;
 }
 
-.projects h2 {
+#projects .content h2 {
     margin-bottom: 0.8rem;
 }
 
-.blog header {
+#blog header {
 
 }
 
-.blog article {
+#blog article {
     border-bottom: 1px solid #ed2939;
     margin-bottom: 2rem;
 }
@@ -97,23 +97,23 @@ header.title h1 {
 
 /* Larger than phablet */
 @media (min-width: 550px) {
-    .section {
+    .section-header {
         padding: 0.8rem 1.4rem;
         border-bottom-width: 0;
         border-right: 4px solid #ed2939;
         text-align: right;
     }
 
-    .section h1 {
+    .section-header h1 {
         margin: 0rem;
         margin-bottom: 0.8rem;
     }
 
-    .projects .row {
+    #projects .content .row {
         overflow: hidden; /* see below */
     }
 
-    .projects .columns {
+    #projects .content .columns {
         /* "one true layout" hack, see:
         http://css-tricks.com/fluid-width-equal-height-columns/ */
         margin-bottom: -500rem;
