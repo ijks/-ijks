@@ -2,6 +2,12 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
 
 /* Mobile first queries */
+
+::selection {
+    color: #eee;
+    background: #ed2939;
+}
+
 body {
     font-family: 'Roboto Slab', serif;
 }
@@ -26,23 +32,60 @@ a:active {
     border-color: #bbb;
 }
 
-header.title {
-    margin-top: 6rem;
+nav {
+    border-bottom: 1px solid #ed2939;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    font-size: 2.2rem;
+}
+
+nav li:not(:last-child)::after {
+    content: "-";
+}
+
+nav a {
+    display: inline-block;
+    padding: 1rem;
+    border: none;
+
+    transition: all 0.2s;
+}
+
+nav a:hover {
+    color: #222;
+    border: none;
+}
+
+.main-header {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.title {
     text-align: center;
     /*border-top: 1px solid;
     border-bottom: 1px solid;
     border-color: #ed2939;*/
-    background-color: #ed2939;
+    background: #ed2939;
     color: #eee;
 }
 
-header.title h1 {
+.title h1 {
     font-weight: bold;
+    margin: 0;
     padding: 2rem 0;
 }
 
 .section-header {
-    /*background-color: #eee;*/
+    /*background: #eee;*/
     color: #ed2939;
     margin-bottom: 1.2rem;
     border-bottom: 4px solid #ed2939;
@@ -52,19 +95,19 @@ header.title h1 {
     padding: 0.8rem;
 
     text-align: center;
-    background-color: #eee;
+    background: #eee;
     color: #222;
 
     transition: all 0.2s;
 }
 
 #projects .content .columns:hover {
-    background-color: #ed2939;
+    background: #ed2939;
     color: #eee;
 }
 
 #projects .content .columns:active {
-    background-color: #fff;
+    background: #fff;
     color: #ed2939;
     transition: all 100ms;
 }
